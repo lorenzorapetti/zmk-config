@@ -87,5 +87,5 @@
             >;    // <---[[the W key]]
             hold-trigger-on-release;
         };
-    }
+    };
 };
