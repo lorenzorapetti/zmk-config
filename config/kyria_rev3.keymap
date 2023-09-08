@@ -54,7 +54,7 @@
     };
 
     behaviors {
-        lhp: positional_hold_tap {
+        lhp: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
@@ -71,7 +71,7 @@
             hold-trigger-on-release;
         };
 
-        rhp: positional_hold_tap {
+        rhp: right_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
