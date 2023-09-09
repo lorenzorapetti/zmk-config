@@ -10,7 +10,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define _COLEMAK 0
-#define _QWERTY 1
+#define _QWERTY  1
+#define _FN      2
 
 /* Uncomment this block if using RGB
 &led_strip {
@@ -24,17 +25,17 @@
     keymap {
         compatible = "zmk,keymap";
 
-        querty_layer {
+        colemak_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
             // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
             bindings = <
-            &kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-            &kp TAB   &lhp LCTL A &lhp LALT S &lhp LGUI D &lhp LSFT F &kp G                          &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT            &mo 1   &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-                                  &kp LGUI &kp DEL &kp RET &kp SPACE &kp ESC       &kp RET &kp SPACE &kp TAB &kp BSPC &kp RALT
+            &kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                                      &kp J   &kp L       &kp U       &kp Y       &kp SEMI    &kp BSLH
+            &kp ESC   &lhp LCTL A &lhp LALT R &lhp LGUI S &lhp LSFT T &kp G                                              &kp M   &rhp RSFT N &rhp LGUI E &rhp LALT I &rhp LCTL O &kp SQT
+            &kp LSHFT &kp Z       &kp X       &kp C       &kp D       &kp V   &kp LSHFT &kp LSHFT      &mo _FN &kp LSHFT &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp RGUI
+                                              &kp LGUI    &kp DEL     &kp RET &kp SPACE &kp ESC        &kp RET &kp BSPC  &kp TAB &kp BSPC    &kp RALT
             >;
         };
 
