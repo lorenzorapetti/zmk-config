@@ -104,6 +104,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
+            quick-tap-term = <100>;
             bindings = <&kp>, <&kp>;
         };
     };
