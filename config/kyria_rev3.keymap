@@ -9,14 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define _COLEMAK 0
+#define DEFAULT  0
 #define _NAV     1
 #define _NUM     2
 #define _FN      3
 
-#define HYP        LS(LC(LA(LGUI)))
-#define HYPER(key) LS(LC(LA(LG(key))))
-#define MEH        LS(LC(LALT))
+#define HYP         LS(LC(LA(LGUI)))
+#define HYPER(key)  LS(LC(LA(LG(key))))
+#define MEH         LS(LC(LALT))
 #define MEHK(key)   LS(LC(LA(key)))
 
 /* Uncomment this block if using RGB
@@ -31,7 +31,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        colemak_layer {
+        default_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
             // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
@@ -40,7 +40,7 @@
             bindings = <
             &ht MEH TAB    &kp Q    &kp W    &kp F       &kp P       &kp B                                                           &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &ht MEH BSLH
             &ht LCTL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                           &kp M    &kp N      &kp E       &kp I     &kp O       &ht LCTL SQT
-            &kp LSHFT      &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT &kp LSHFT      &mo _FN       &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
+            &kp LSHFT      &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT &kp LSHFT      &mo _NUM       &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
                                              &kp HYP     &kp LALT    &kp LGUI &kp SPACE &kp ESC        &lt _NAV RET  &lt _NUM BSPC   &kp LGUI &kp LALT   &kp HYP
             >;
         };
