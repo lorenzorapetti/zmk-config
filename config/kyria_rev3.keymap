@@ -31,6 +31,10 @@
     quick-tap-ms = <150>;
 };
 
+&mt {
+    quick-tap-ms = <150>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -42,10 +46,10 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
             bindings = <
-            &mt MEH TAB     &kp Q    &kp W    &kp F       &kp P       &kp B                                                           &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &mt MEH BSLH
-            &mt LCTRL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                           &kp M    &kp N      &kp E       &kp I     &kp O       &mt LCTRL SQT
-            &kp LSHFT       &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT &kp LSHFT      &mo _NUM      &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
-                                              &kp HYP     &kp LALT    &kp LGUI &kp SPACE &kp ESC        &lt _NAV RET  &lt _NUM BSPC   &kp LGUI &kp LALT   &kp HYP
+            &mt MEH TAB     &kp Q    &kp W    &kp F       &kp P       &kp B                                                               &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &mt MEH BSLH
+            &mt LCTRL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                               &kp M    &kp N      &kp E       &kp I     &kp O       &mt LCTRL SQT
+            &kp LSHFT       &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT        &kp LSHFT      &mo _NUM   &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
+                                              &kp HYP     &kp LALT    &kp LGUI &LT _NAV SPACE   &kp ESC        &kp RET    &lt _NUM BSPC   &kp LGUI &kp LALT   &kp HYP
             >;
         };
 
@@ -57,7 +61,7 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
             &trans      &trans   &trans   &trans   &trans   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
-            &trans      &trans   &trans   &trans   &trans   &trans                                            &kp LEFT        &kp UP      &kp DOWN    &kp RIGHT   &trans      &trans
+            &trans      &trans   &trans   &trans   &trans   &trans                                            &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
             &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
                                           &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans
             >;
