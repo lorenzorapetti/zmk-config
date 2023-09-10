@@ -10,8 +10,14 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define _COLEMAK 0
-#define _QWERTY  1
+#define _NAV     1
 #define _FN      2
+#define _NUM     3
+
+#define HYP        LS(LC(LA(LGUI)))
+#define HYPER(key) LS(LC(LA(LG(key))))
+#define MEH        LS(LC(LALT))
+#define MEH(key)   LS(LC(LA(key)))
 
 /* Uncomment this block if using RGB
 &led_strip {
@@ -32,10 +38,24 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
             bindings = <
-            &kp TAB   &kp Q &kp W &kp F &kp P &kp B                                                                      &kp J   &kp L       &kp U       &kp Y       &kp SEMI    &kp BSLH
-            &kp ESC   &lhp LCTL A &lhp LALT R &lhp LGUI S &lhp LSFT T &kp G                                              &kp M   &rhp RSFT N &rhp LGUI E &rhp LALT I &rhp LCTL O &kp SQT
-            &kp LSHFT &kp Z       &kp X       &kp C       &kp D       &kp V   &kp LSHFT &kp LSHFT      &mo _FN &kp LSHFT &kp K   &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp RGUI
-                                              &kp LGUI    &kp DEL     &kp RET &kp SPACE &kp ESC        &kp RET &kp BSPC  &kp TAB &kp BSPC    &kp RALT
+            &ht MEH TAB    &kp Q    &kp W    &kp F       &kp P       &kp B                                                         &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &ht MEH BSLH
+            &ht LCTL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                         &kp M    &kp N      &kp E       &kp I     &kp O       &ht LCTL SQT
+            &kp LSHFT      &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT &kp LSHFT      &mo _FN      &kp LSHFT      &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
+                                             &kp HYP     &kp LALT    &kp LGUI &kp SPACE &kp ESC        &lt _NAV RET &lt _NUM BSPC  &kp LGUI &kp LALT   &kp HYP
+            >;
+        };
+
+        navigation_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
+            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
+            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
+            bindings = <
+            &trans      &trans   &trans   &trans   &trans   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
+            &trans      &trans   &trans   &trans   &trans   &trans                                            &kp LEFT        &kp UP      &kp DOWN    &kp RIGHT   &trans      &trans
+            &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
+                                          &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans
             >;
         };
 
@@ -46,35 +66,45 @@
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
-            &kp N1      &trans &trans       &out OUT_BLE &out OUT_USB &trans                                    &trans &trans &trans &trans &trans &trans
+            &trans      &trans &trans       &out OUT_BLE &out OUT_USB &trans                                    &trans &trans &trans &trans &trans &trans
             &bootloader &trans &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 3 &trans                                    &trans &trans &trans &trans &trans &bootloader
             &trans      &trans &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
                                                         &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
         };
+
+        numbers_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
+            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
+            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
+            bindings = <
+            &trans      &trans   &kp N9   &kp N8   &kp N7   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
+            &trans      &trans   &kp N6   &kp N5   &kp N4   &trans                                            &kp LEFT        &kp LSFT    &kp LGUI    &kp LALT    &kp LCTL      &trans
+            &trans      &trans   &kp N3   &kp N2   &kp N1   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
+                                          &trans   &trans   &trans   &kp N0   &trans        &trans   &trans   &trans          &trans      &trans
+            >;
+        };
     };
 
     behaviors {
-        lhp: left_hold_tap {
+        hp: hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_HOLD_TAP";
+            label = "HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
 
-        rhp: right_hold_tap {
+        lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_HOLD_TAP";
+            label = "LAYER_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
             bindings = <&kp>, <&kp>;
-        };
+        }
     };
 };
