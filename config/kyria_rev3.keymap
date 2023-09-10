@@ -11,8 +11,8 @@
 
 #define _COLEMAK 0
 #define _NAV     1
-#define _FN      2
-#define _NUM     3
+#define _NUM     2
+#define _FN      3
 
 #define HYP        LS(LC(LA(LGUI)))
 #define HYPER(key) LS(LC(LA(LG(key))))
@@ -59,20 +59,6 @@
             >;
         };
 
-        function_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
-            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
-            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
-            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
-            bindings = <
-            &trans      &trans &trans       &out OUT_BLE &out OUT_USB &trans                                    &trans &trans &trans &trans &trans &trans
-            &bootloader &trans &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 3 &trans                                    &trans &trans &trans &trans &trans &bootloader
-            &trans      &trans &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
-                                                        &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
-            >;
-        };
-
         numbers_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
@@ -84,6 +70,20 @@
             &trans      &trans   &kp N6   &kp N5   &kp N4   &trans                                            &kp LEFT        &kp LSFT    &kp LGUI    &kp LALT    &kp LCTL      &trans
             &trans      &trans   &kp N3   &kp N2   &kp N1   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
                                           &trans   &trans   &trans   &kp N0   &trans        &trans   &trans   &trans          &trans      &trans
+            >;
+        };
+
+        function_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
+            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
+            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
+            bindings = <
+            &trans      &trans &trans       &out OUT_BLE &out OUT_USB &trans                                    &trans &trans &trans &trans &trans &trans
+            &bootloader &trans &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 3 &trans                                    &trans &trans &trans &trans &trans &bootloader
+            &trans      &trans &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
+                                                        &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
         };
     };
