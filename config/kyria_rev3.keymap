@@ -12,7 +12,8 @@
 #define DEFAULT  0
 #define _NAV     1
 #define _NUM     2
-#define _FN      3
+#define _SYM     3
+#define _FN      4
 
 #define HYP         LS(LC(LA(LGUI)))
 #define HYPER(key)  LS(LC(LA(LG(key))))
@@ -46,10 +47,10 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | LAYER 1 | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
             bindings = <
-            &mt MEH TAB     &kp Q    &kp W    &kp F       &kp P       &kp B                                                               &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &mt MEH BSLH
-            &mt LEFT_CONTROL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                               &kp M    &kp N      &kp E       &kp I     &kp O       &mt LCTRL SQT
-            &kp LSHFT       &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT        &kp LSHFT      &mo _NUM   &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
-                                              &kp HYP     &kp LALT    &kp LGUI &lt _NAV SPACE   &kp ESC        &kp RET    &lt _NUM BSPC   &kp LGUI &kp LALT   &kp HYP
+            &mt MEH TAB     &kp Q    &kp W    &kp F       &kp P       &kp B                                                                    &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &mt MEH BSLH
+            &mt LCTRL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                                    &kp M    &kp N      &kp E       &kp I     &kp O       &mt LCTRL SQT
+            &kp LSHFT       &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT        &kp LSHFT      &mo _NUM        &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
+                                              &kp HYP     &kp LALT    &kp LGUI &lt _NAV SPACE   &kp ESC        &lt _SYM RET    &lt _NUM BSPC   &kp LGUI &kp LALT   &kp HYP
             >;
         };
 
@@ -75,9 +76,23 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
             &trans      &trans   &kp N9   &kp N8   &kp N7   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
-            &trans      &trans   &kp N6   &kp N5   &kp N4   &trans                                            &trans          &kp LSFT    &kp LGUI    &kp LALT    &kp LCTL      &trans
+            &trans      &trans   &kp N6   &kp N5   &kp N4   &trans                                            &trans          &kp LSFT    &kp LGUI    &kp LALT    &kp LCTRL   &trans
             &trans      &trans   &kp N3   &kp N2   &kp N1   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
                                           &trans   &trans   &trans   &kp N0   &trans        &trans   &trans   &trans          &trans      &trans
+            >;
+        };
+
+        symbols_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
+            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
+            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
+            bindings = <
+            &kp GRAVE   &kp EXCL  &kp AT   &kp LBRC   &kp RBRC   &trans                                            &trans    &kp PLUS    &kp STAR    &kp SLASH   &trans    &trans
+            &kp TILDE   &kp PRCNT &kp HASH &kp LPAR   &kp RPAR   &trans                                            &trans    &kp COLON   &kp SEMI    &kp PIPE    &trans    &trans
+            &trans      &kp CARET &kp DLLR &kp LBKT   &kp RBKT   &trans   &trans   &trans        &trans   &trans   &trans    &kp EQUAL   &kp MINUS   &kp UNDER   &kp BSLH  &trans
+                                           &trans     &trans     &trans   &trans   &trans        &trans   &trans   &trans    &trans      &trans
             >;
         };
 
