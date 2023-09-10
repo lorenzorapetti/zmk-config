@@ -111,6 +111,14 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        fn_tri_layer {
+            if-layers = <_SYM _NUM>;
+            then-layer = <_FN>;
+        };
+    };
+
     // behaviors {
     //     ht: hold_tap {
     //         compatible = "zmk,behavior-hold-tap";
