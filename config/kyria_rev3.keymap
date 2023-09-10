@@ -41,7 +41,7 @@
             &ht MEH TAB    &kp Q    &kp W    &kp F       &kp P       &kp B                                                           &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &ht MEH BSLH
             &ht LCTL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                           &kp M    &kp N      &kp E       &kp I     &kp O       &ht LCTL SQT
             &kp LSHFT      &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT &kp LSHFT      &mo _FN       &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
-                                             &kp HYP     &kp LALT    &kp LGUI &kp SPACE &kp ESC        &lrt _NAV RET &lrt _NUM BSPC  &kp LGUI &kp LALT   &kp HYP
+                                             &kp HYP     &kp LALT    &kp LGUI &kp SPACE &kp ESC        &lht _NAV RET &lht _NUM BSPC  &kp LGUI &kp LALT   &kp HYP
             >;
         };
 
@@ -67,7 +67,7 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
             &trans      &trans   &kp N9   &kp N8   &kp N7   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
-            &trans      &trans   &kp N6   &kp N5   &kp N4   &trans                                            &kp LEFT        &kp LSFT    &kp LGUI    &kp LALT    &kp LCTL      &trans
+            &trans      &trans   &kp N6   &kp N5   &kp N4   &trans                                            &trans          &kp LSFT    &kp LGUI    &kp LALT    &kp LCTL      &trans
             &trans      &trans   &kp N3   &kp N2   &kp N1   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
                                           &trans   &trans   &trans   &kp N0   &trans        &trans   &trans   &trans          &trans      &trans
             >;
@@ -98,13 +98,13 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lrt: layer_tap {
+        lht: layer_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
     };
