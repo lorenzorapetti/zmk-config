@@ -89,7 +89,7 @@
     };
 
     behaviors {
-        hp: hold_tap {
+        ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
             #binding-cells = <2>;
