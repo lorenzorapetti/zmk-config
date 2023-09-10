@@ -105,6 +105,6 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-        }
+        };
     };
 };
