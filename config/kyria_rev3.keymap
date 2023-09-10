@@ -47,7 +47,7 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
             bindings = <
             &mt MEH TAB     &kp Q    &kp W    &kp F       &kp P       &kp B                                                               &kp J    &kp L      &kp U       &kp Y     &kp SEMI    &mt MEH BSLH
-            &mt LSHFT ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                               &kp M    &kp N      &kp E       &kp I     &kp O       &mt LCTRL SQT
+            &mt LEFT_CONTROL ESC   &kp A    &kp R    &kp S       &kp T       &kp G                                                               &kp M    &kp N      &kp E       &kp I     &kp O       &mt LCTRL SQT
             &kp LSHFT       &kp Z    &kp X    &kp C       &kp D       &kp V    &kp LSHFT        &kp LSHFT      &mo _NUM   &kp LSHFT       &kp K    &kp H      &kp COMMA   &kp DOT   &kp FSLH    &kp RSHFT
                                               &kp HYP     &kp LALT    &kp LGUI &lt _NAV SPACE   &kp ESC        &kp RET    &lt _NUM BSPC   &kp LGUI &kp LALT   &kp HYP
             >;
