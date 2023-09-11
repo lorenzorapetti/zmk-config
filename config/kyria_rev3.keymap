@@ -75,9 +75,9 @@
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
-            &trans      &trans   &kp N9   &kp N8   &kp N7   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
-            &trans      &trans   &kp N6   &kp N5   &kp N4   &trans                                            &trans          &kp LSFT    &kp LGUI    &kp LALT    &kp LCTRL   &trans
-            &trans      &trans   &kp N3   &kp N2   &kp N1   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
+            &trans      &trans   &kp N7   &kp N8   &kp N9   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
+            &trans      &trans   &kp N4   &kp N5   &kp N6   &trans                                            &trans          &kp LSFT    &kp LGUI    &kp LALT    &kp LCTRL   &trans
+            &trans      &trans   &kp N1   &kp N2   &kp N3   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
                                           &trans   &trans   &trans   &kp N0   &trans        &trans   &trans   &trans          &trans      &trans
             >;
         };
