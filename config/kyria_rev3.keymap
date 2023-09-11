@@ -61,10 +61,10 @@
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
-            &trans      &trans   &trans   &trans   &trans   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
-            &trans      &trans   &trans   &trans   &trans   &trans                                            &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
-            &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
-                                          &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans
+            &trans      &trans      &trans   &trans   &trans   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
+            &trans      &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &trans                                     &kp LEFT        &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
+            &trans      &trans      &trans   &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
+                                             &trans   &trans   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans
             >;
         };
 
