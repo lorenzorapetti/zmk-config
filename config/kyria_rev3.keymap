@@ -75,9 +75,9 @@
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
-            &trans      &trans   &kp N7   &kp N8   &kp N9   &trans                                            &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
+            &trans      &trans   &kp N7   &kp N8   &kp N9   &trans                                            &trans          &trans   &trans   &trans   &trans   &trans
             &trans      &trans   &kp N4   &kp N5   &kp N6   &trans                                            &trans          &kp LSFT    &kp LGUI    &kp LALT    &kp LCTRL   &trans
-            &trans      &trans   &kp N1   &kp N2   &kp N3   &trans   &trans   &trans        &trans   &trans   &trans          &trans      &trans      &trans      &trans      &trans
+            &trans      &trans   &kp N1   &kp N2   &kp N3   &trans   &trans   &trans        &trans   &trans   &kp LG(LS(Z))   &kp LG(V)   &kp LG(C)   &kp LG(X)   &kp LG(Z)   &trans
                                           &trans   &trans   &trans   &kp N0   &trans        &trans   &trans   &trans          &trans      &trans
             >;
         };
@@ -103,9 +103,9 @@
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
-            &trans      &trans &trans       &out OUT_BLE &out OUT_USB &trans                                    &trans &trans &trans &trans &trans &trans
-            &bootloader &trans &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 3 &trans                                    &trans &trans &trans &trans &trans &bootloader
-            &trans      &trans &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans      &trans &trans       &out OUT_BLE &out OUT_USB &trans                                    &kp F11 &kp F12 &kp F13 &kp F14 &kp F15 &trans
+            &bootloader &trans &bt BT_CLR   &bt BT_SEL 4 &bt BT_SEL 3 &trans                                    &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &bootloader
+            &trans      &trans &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &trans &trans &trans        &trans &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &trans
                                                         &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
         };
