@@ -3,6 +3,6 @@ id: void16
 name: Void16
 type: shield
 url: https://github.com/victorlucachi/void16
-requires: [pro_micro]
+requires: [nice_nano_v2]
 features:
   - keys
