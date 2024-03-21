@@ -1,0 +1,6 @@
+if SHIELD_VOID16
+
+config ZMK_KEYBOARD_NAME
+    default "Void 16"
+
+endif

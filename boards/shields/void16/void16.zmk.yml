@@ -1,0 +1,8 @@
+file_format: '1'
+id: void16
+name: Void16
+type: shield
+url: https://github.com/victorlucachi/void16
+requires: [pro_micro]
+features:
+  - keys
