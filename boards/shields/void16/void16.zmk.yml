@@ -1,8 +1,0 @@
-file_format: '1'
-id: void16
-name: Void16
-type: shield
-url: https://github.com/victorlucachi/void16
-requires: [nice_nano_v2]
-features:
-  - keys
